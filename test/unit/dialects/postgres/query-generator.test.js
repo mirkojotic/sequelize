@@ -150,7 +150,7 @@ if (dialect.match(/^postgres/)) {
         },
         {
           arguments: ['myTable', {int: 'INTEGER COMMENT Test', foo: 'INTEGER COMMENT Foo Comment'}],
-          expectation: 'CREATE TABLE IF NOT EXISTS \"myTable\" (\"int\" INTEGER , \"foo\" INTEGER ); COMMENT ON COLUMN \"myTable\".\"int\" IS \'Test\'; COMMENT ON COLUMN \"myTable\".\"foo\" IS \'Foo Comment\';'
+          expectation: 'CREATE TABLE IF NOT EXISTS \"myTable\" (\"int\" INTEGER, \"foo\" INTEGER); COMMENT ON COLUMN \"myTable\".\"int\" IS \'Test\'; COMMENT ON COLUMN \"myTable\".\"foo\" IS \'Foo Comment\';'
         },
         {
           arguments: ['myTable', {title: 'VARCHAR(255)', name: 'VARCHAR(255)'}],
